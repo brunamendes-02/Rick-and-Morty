@@ -1,28 +1,10 @@
-import { useQuery } from '@apollo/client'
-import { getAllCharacters } from './server/queries'
-import Card from './components/card/card'
+import React from "react";
 
-const App = () => {
-  const { loading, error, data } = useQuery(getAllCharacters, {
-    variables: { page: 3 }
-  })
+import Routes from "./routes";
+import './styles/globals.css';
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error {error.message}</p>
-
+export default function App() {
   return (
-    <>
-      <header>
-        <h1>Rick and Morty</h1>
-      </header>
-      <div>
-        {data?.characters?.results.map(character =>
-          <Card character={character} key={character.id} />
-        )}
-      </div>
-    </>
-
-  )
+      <Routes />
+  );
 }
-
-export default App

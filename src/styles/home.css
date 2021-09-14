@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imageLogo {
+  width: 40%;
+}
+.homeContent {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.charactersImage {
+  width: 30%;
+  margin-right: 10%;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 230px;
+  height: 60px;
+  background: var(--strongBlue);
+  box-shadow: 7px 7px 23px var(--green);
+  border-radius: 10px;
+  margin-top: 15%;
+
+  text-decoration: none;
+  font-family: "Nosifer";
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--white);
+}
+.button:hover {
+  background: #52c0d7;
+}

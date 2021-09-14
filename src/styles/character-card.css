@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.character-card-container {
+  width: 75%;
+  margin-left: 10%;
+  background: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  box-shadow: 4px 10px 10px rgba(145, 145, 145, 0.25);
+}
+.episode-card-container {
+  padding: 30px 0px 25px 20px;
+  width: 100%;
+  margin-left: 10%;
+  background: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  box-shadow: 4px 10px 10px rgba(145, 145, 145, 0.25);
+}
+.episode-card-container p {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  color: #474747;
+}
+
+.episode-card-container:hover {
+  background: #f7f7f7;
+}
+
+.character-card-container:hover {
+  background: #f7f7f7;
+}
+
+.character-profile-picture {
+  width: 25%;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.character-card-container p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #474747;
+}
+.arrow {
+  margin-right: 25px;
+}
+.arrow-content {
+  margin-left: auto;
+}
