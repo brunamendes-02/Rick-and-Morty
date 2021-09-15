@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import '../styles/selected-character-card.css';
 export function SelectedCharacterCard({character}) {
   const [status, setStatus] = useState();
-  console.log(character);
 
     useEffect(() => {
       if (character) {
