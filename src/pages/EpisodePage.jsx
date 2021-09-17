@@ -2,17 +2,17 @@ import React, {useState, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import { useQuery } from '@apollo/client'
 import { getEpisodeByName } from '../server/queries'
-import { EpisodeCard } from "../components/episodeCard";
-import { SelectedEpisodeCard } from "../components/selectedEpisodeCard";
+import { EpisodeCard } from "../components/EpisodeCard";
+import { SelectedEpisodeCard } from "../components/SelectedEpisodeCard";
 import Arrow from '../icon/arrow';
 import Search from '../icon/search';
-import { InputBase, Select, MenuItem } from '@material-ui/core';
+import { InputBase, Select, MenuItem, CircularProgress } from '@material-ui/core';
 
 export function EpisodePage() {
   const [selectedEpisode, setSelectedEpisode] = useState();
   const [episodeName, setEpisodeName] = useState('');
   const [nameToSearch, setNameToSearch] = useState('');
-  const [filterType, setFilterType] = useState('');
+  const [filterType, setFilterType] = useState('clean');
   const [episodes, setEpisodes] = useState('');
 
   const { loading: loadingEpisodeByName, data: dataEpisodeByName } = useQuery(getEpisodeByName, {
@@ -41,6 +41,7 @@ export function EpisodePage() {
 
   const handleSearch = () => {
       setNameToSearch(episodeName);
+      setFilterType('clean')
   }
   const filterByName = () => {
     console.log(dataEpisodeByName.episodes.results);
@@ -112,10 +113,14 @@ export function EpisodePage() {
           </Select>
         </div>
       </div>
-      {loadingEpisodeByName ? <p>loading...</p> : (
+      {loadingEpisodeByName ? (
+        <div class="loading-icon-content">
+          <CircularProgress />
+        </div>
+        ) : (
         <div className="page-container">
           <div>
-            {episodes?.map(episode => {
+            {episodes?.length && episodes?.map(episode => {
               return <EpisodeCard selectedEpisode={(value) => setSelectedEpisode(value)} episode={episode} key={episode.id}/>
             })}
           </div>

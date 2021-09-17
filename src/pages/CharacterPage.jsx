@@ -2,18 +2,18 @@ import React, {useState, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import { useQuery } from '@apollo/client'
 import { getCharacterByName } from '../server/queries'
-import {CharacterCard} from '../components/characterCard'
-import { SelectedCharacterCard } from "../components/selectedCharacterCard";
+import {CharacterCard} from '../components/CharacterCard'
+import { SelectedCharacterCard } from "../components/SelectedCharacterCard";
 import Arrow from '../icon/arrow';
 import Search from '../icon/search';
 
 import '../styles/character-page.css';
-import { InputBase, Select, MenuItem } from '@material-ui/core';
+import { InputBase, Select, MenuItem, CircularProgress } from '@material-ui/core';
 
 export function CharacterPage() {
   const [selectedCharter, setSelectedCharter] = useState();
   const [characterName, setCharacterName] = useState('');
-  const [filterType, setFilterType] = useState('');
+  const [filterType, setFilterType] = useState('clean');
   const [nameToSearch, setNameToSearch] = useState('');
   const [characters, setCharacters] = useState('');
   const { loading: loadingCharacterByName, data: dataCharacterByName } = useQuery(getCharacterByName, {
@@ -43,8 +43,8 @@ export function CharacterPage() {
 
   const handleSearch = () => {
       setNameToSearch(characterName);
+      setFilterType('clean')
   }
-
   const filterByName = () => {
     const characters = [];
     dataCharacterByName?.characters?.results?.map((character) => {
@@ -82,7 +82,6 @@ export function CharacterPage() {
     }
     setCharacters(sortedEoQuantity);
   }
-
   return (
     <>
         <div className="header">
@@ -115,11 +114,15 @@ export function CharacterPage() {
             </Select>
           </div>
         </div>
-        {loadingCharacterByName ? <p>loading....</p> : (       
+        {loadingCharacterByName ? (
+          <div class="loading-icon-content">
+            <CircularProgress />
+          </div>
+          ): (       
           <div className="page-container">
 
             <div>
-            {characters?.map(character =>
+            {characters?.length && characters?.map(character =>
               <CharacterCard selectedCharacter={(value) => setSelectedCharter(value)} character={character} key={character.id} />
             )}
             </div>

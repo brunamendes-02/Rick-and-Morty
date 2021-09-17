@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
-import { HomePage } from "./pages/homePage";
-import { EpisodePage } from "./pages/episodePage";
-import { CharacterPage } from "./pages/characterPage";
+import { HomePage } from "./pages/HomePage";
+import { EpisodePage } from "./pages/EpisodePage";
+import { CharacterPage } from "./pages/CharacterPage";
 
 function Routes() {
   return (

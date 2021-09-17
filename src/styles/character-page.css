@@ -21,6 +21,14 @@
   text-decoration: none;
   align-items: center;
   display: flex;
+  width: 164px;
+}
+
+.link:hover p {
+  color: #797979;
+}
+.link:hover svg path {
+  fill: #797979;
 }
 .link p {
   font-family: Roboto;
@@ -29,6 +37,8 @@
   font-size: 15px;
   line-height: 29px;
   color: #474747;
+  margin-left: 10px;
+  margin-top: 3px;
 }
 .search-input {
   padding: 10px;
@@ -71,4 +81,9 @@
 }
 .select-search-box div {
   width: 80%;
+}
+.loading-icon-content {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
 }
