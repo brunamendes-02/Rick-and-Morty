@@ -66,18 +66,18 @@ export function EpisodePage() {
         charactersQuantity: ep.characters.length,
       })
     })
-    let sortedEoQuantity;
+    let sortedEpQuantity;
     switch(count) {
       case "more":
-        sortedEoQuantity = episode.sort((a,b) => (a.charactersQuantity > b.charactersQuantity) ? -1 : ((b.charactersQuantity > a.charactersQuantity) ? 1 : 0))
+        sortedEpQuantity = episode.sort((a,b) => (a.charactersQuantity > b.charactersQuantity) ? -1 : ((b.charactersQuantity > a.charactersQuantity) ? 1 : 0))
       break;
       case "less":
-        sortedEoQuantity = episode.sort((a,b) => (a.charactersQuantity > b.charactersQuantity) ? 1 : ((b.charactersQuantity > a.charactersQuantity) ? -1 : 0))
+        sortedEpQuantity = episode.sort((a,b) => (a.charactersQuantity > b.charactersQuantity) ? 1 : ((b.charactersQuantity > a.charactersQuantity) ? -1 : 0))
         break;
         default:
           return;
     }
-    setEpisodes(sortedEoQuantity);
+    setEpisodes(sortedEpQuantity);
   }
 
 

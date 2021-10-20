@@ -29,10 +29,10 @@ export function CharacterPage() {
       case "name":
         filterByName()
       break;
-      case "ep-more":
+      case "char-more":
         filterByEpQuantity('more')
       break;
-      case "ep-less":
+      case "char-less":
         filterByEpQuantity('less')
       break;
       default:
@@ -109,8 +109,8 @@ export function CharacterPage() {
             >
               <MenuItem selected value="clean">Ordenar</MenuItem>
               <MenuItem value="name">Nome</MenuItem>
-              <MenuItem value="ep-more">Mais episódios</MenuItem>
-              <MenuItem value="ep-less">Menos episódios</MenuItem>
+              <MenuItem value="char-more">Mais episódios</MenuItem>
+              <MenuItem value="char-less">Menos episódios</MenuItem>
             </Select>
           </div>
         </div>
