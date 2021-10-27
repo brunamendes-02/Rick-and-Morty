@@ -77,7 +77,7 @@ export function CharacterPage() {
             onChange={(event) => setFilterType(event.target.value)}
             label="Ordenar por"
           >
-            <option selected value="clean">Ordenar</option>
+            <option defaultValue value="clean">Ordenar</option>
             <option value="name">Nome</option>
             <option value="char-more">Mais episódios</option>
             <option value="char-less">Menos episódios</option>
@@ -91,8 +91,8 @@ export function CharacterPage() {
         <div className="page-container">
 
           <div>
-          {characters?.length && characters?.map(character =>
-            <CharacterCard selectedCharacter={(value) => setSelectedCharter(value)} character={character} key={character.id} />
+          {characters?.length && characters?.map((character, index) =>
+            <CharacterCard selectedCharacter={(value) => setSelectedCharter(value)} character={character} key={index} />
           )}
           </div>
           {selectedCharter && <SelectedCharacterCard  character={selectedCharter}/>}

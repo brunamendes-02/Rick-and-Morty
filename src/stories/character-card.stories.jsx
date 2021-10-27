@@ -19,8 +19,8 @@ const characters = [
 export function CharacterCardStory() {
   return (
     <>
-      {characters.map(character => (
-        <CharacterCard character={character} selectedCharacter={(value) => console.log(value)}/>
+      {characters.map((character, index) => (
+        <CharacterCard key={index} character={character} selectedCharacter={(value) => console.log(value)}/>
       ))}
     </>
   )

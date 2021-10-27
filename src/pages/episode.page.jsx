@@ -77,7 +77,7 @@ export function EpisodePage() {
             onChange={(event) => setFilterType(event.target.value)}
             label="Ordenar por"
           >
-            <option selected value="clean">Ordenar</option>
+            <option defaultValue value="clean">Ordenar</option>
             <option value="name">Nome</option>
             <option value="ep-more">Mais personagens</option>
             <option value="ep-less">Menos personagens</option>
@@ -90,8 +90,8 @@ export function EpisodePage() {
         ) : (
         <div className="page-container">
           <div>
-            {episodes?.length && episodes?.map(episode => {
-              return <EpisodeCard selectedEpisode={(value) => setSelectedEpisode(value)} episode={episode} key={episode.id}/>
+            {episodes?.length && episodes?.map((episode, index) => {
+              return <EpisodeCard selectedEpisode={(value) => setSelectedEpisode(value)} episode={episode} key={index}/>
             })}
           </div>
             {selectedEpisode && <SelectedEpisodeCard episode={selectedEpisode}/>}

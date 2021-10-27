@@ -2,14 +2,14 @@ export const orderByQuantity = (count, data, parameter) => {
     const currentData = [];
     if(parameter === 'episode')
         data?.results?.map((character) => {
-            currentData.push({
+            return currentData.push({
                 ...character,
                 quantity: character.episode.length,
             })
         })
     if(parameter === 'character')
         data?.results?.map((character) => {
-              currentData.push({
+            return currentData.push({
                 ...character,
                 quantity: character.characters.length,
             })

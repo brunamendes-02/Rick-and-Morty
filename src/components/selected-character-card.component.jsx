@@ -31,7 +31,7 @@ export function SelectedCharacterCard({character}) {
           <p className="locale">{character.origin.name}</p>
           <h1 className="episodes-title">Episódios ({character.episode.length})</h1>
             {character.episode.map((ep, index) => {
-              return <div className="episode">
+              return <div className="episode" key={index}>
               <div className="information-content">
                 <p>Nome: &nbsp;</p>
                 <p>{ep.name}</p>

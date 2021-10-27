@@ -12,7 +12,7 @@ export function SelectedEpisodeCard({episode}) {
           <p className="locale">{episode.air_date}</p>
           <h1 className="episodes-title">Personagens ({episode.characters.length})</h1>
             {episode.characters.map((character, index) => {
-              return  <div className="information-content">
+              return  <div className="information-content" key={index}>
                 <p>-&nbsp;</p>
                 <p>{character.name}</p>
               </div>

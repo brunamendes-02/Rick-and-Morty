@@ -17,8 +17,8 @@ const episodes = [
 export function EpisodeCardStory() {
   return (
     <>
-      {episodes.map(episode => (
-        <EpisodeCard episode={episode} selectedEpisode={(value) => console.log(value)}/>
+      {episodes.map((episode, index) => (
+        <EpisodeCard key={index} episode={episode} selectedEpisode={(value) => console.log(value)}/>
       ))}
     </>
   )
