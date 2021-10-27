@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 function SvgArrow(props) {
   return (
     <svg {...props} width="15" height="15" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">

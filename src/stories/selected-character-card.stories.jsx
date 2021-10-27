@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { SelectedCharacterCard } from '../components/SelectedCharacterCard';
+import { SelectedCharacterCard } from '../components/selected-character-card.component';
 
 export default {
   title: 'Components/CardCharacter',
   component: SelectedCharacterCard,
 };
+
 const selectedCharacter = {
     image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
     name: 'Rick',
@@ -24,10 +25,7 @@ const selectedCharacter = {
       }
     ]
   };
+
 export function SelectedCharacterCardStory() {
-  return (
-    <>
-      <SelectedCharacterCard character={selectedCharacter}/>
-    </>
-  )
+  return <SelectedCharacterCard character={selectedCharacter}/>
 }

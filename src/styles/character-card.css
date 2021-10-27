@@ -3,7 +3,7 @@
 .character-card-container {
   width: 75%;
   margin-left: 10%;
-  background: #ffffff;
+  background: var(--white);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@
   font-weight: bold;
   font-size: 20px;
   margin-left: 10px;
-  color: #474747;
+  color: var(--strong-grey);
 }
 
 .character-profile-picture {

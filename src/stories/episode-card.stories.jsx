@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EpisodeCard } from '../components/episode-card';
+import { EpisodeCard } from '../components/episode-card.component';
 
 export default {
   title: 'Components/CardEpisode',
@@ -16,10 +16,10 @@ const episodes = [
 ];
 export function EpisodeCardStory() {
   return (
-    <>
+    <div style={{width: '50%'}}>
       {episodes.map((episode, index) => (
         <EpisodeCard key={index} episode={episode} selectedEpisode={(value) => console.log(value)}/>
       ))}
-    </>
+    </div>
   )
 }

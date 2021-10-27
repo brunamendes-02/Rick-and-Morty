@@ -4,21 +4,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #ffffff;
+  background: var(--white);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
   width: 25%;
-  height: 85%;
+  max-height: 85%;
   position: fixed;
   right: 20%;
   top: 7%;
 }
 .profile-picture {
-  width: 100%;
-  padding: 15px;
+  padding: 15px 15px 0px 15px;
 }
 .main-informations {
+  margin-top: 3%;
   display: flex;
   justify-content: center;
+}
+.information-content:last-child {
+  margin-bottom: 3%;
 }
 .name {
   font-family: Roboto;
@@ -26,7 +29,7 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 35px;
-  color: #474747;
+  color: var(--strong-grey);
   padding: 5px;
 }
 
@@ -44,11 +47,10 @@
   font-family: Roboto;
   font-size: 15px;
   text-align: center;
-  color: #474747;
+  color: var(--strong-grey);
   margin-bottom: 10px;
 }
 .episodes-title {
-  width: 100%;
   background: #dcdcdc;
   font-family: Roboto;
   font-weight: bold;
@@ -63,7 +65,7 @@
   display: flex;
   font-family: Roboto;
   font-size: 15px;
-  color: #474747;
+  color: var(--strong-grey);
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 5px;

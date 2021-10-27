@@ -30,7 +30,7 @@
   align-items: center;
   width: 230px;
   height: 60px;
-  background: var(--strongBlue);
+  background: var(--blue);
   box-shadow: 7px 7px 23px var(--green);
   border-radius: 10px;
   margin-top: 15%;
@@ -39,7 +39,7 @@
   font-family: "Nosifer";
   font-weight: 400;
   font-size: 18px;
-  color: var(--white);
+  color: var(--background);
 }
 .button:hover {
   background: #52c0d7;

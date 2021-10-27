@@ -1,28 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
-  --white: #f4f4f4;
-  --strongBlue: #22a2bd;
+  --white: #fcfafa;
+  --background: #f4f4f4;
+  --blue: #22a2bd;
   --green: #8afe5c;
-}
-
-@media (max-width: 1080) {
-  html {
-    font-size: 93.75%;
-  }
-}
-@media (max-width: 720) {
-  html {
-    font-size: 87.5%;
-  }
+  --strong-grey: #474747;
+  --link: #797979;
+  --grey: #dcdcdc;
 }
 
 body {
-  background: var(--white);
+  background: var(--background);
 }
 
 button {

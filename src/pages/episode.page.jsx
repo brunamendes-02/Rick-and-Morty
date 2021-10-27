@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { getEpisodeByName } from '../server/queries';
@@ -10,6 +10,7 @@ import { SelectedEpisodeCard } from "../components/selected-episode-card.compone
 
 import Arrow from '../assets/icon/arrow';
 import Search from '../assets/icon/search';
+import Loader from '../assets/icon/loader';
 
 import '../styles/character-and-episode-page.css';
 export function EpisodePage() {
@@ -48,10 +49,10 @@ export function EpisodePage() {
     }
   }, [dataEpisodeByName?.episodes, filterType]);
 
-  const handleSearch = () => {
+  const handleSearch = useCallback(() => {
       setNameToSearch(episodeName);
       setFilterType('clean')
-  }
+  }, [episodeName])
 
   return (
     <>
@@ -85,12 +86,12 @@ export function EpisodePage() {
       </div>
       {loadingEpisodeByName ? (
         <div className="loading-icon-content">
-          loading...
+          <Loader />
         </div>
         ) : (
         <div className="page-container">
           <div>
-            {episodes?.length && episodes?.map((episode, index) => {
+            {episodes?.length > 0 && episodes?.map((episode, index) => {
               return <EpisodeCard selectedEpisode={(value) => setSelectedEpisode(value)} episode={episode} key={index}/>
             })}
           </div>

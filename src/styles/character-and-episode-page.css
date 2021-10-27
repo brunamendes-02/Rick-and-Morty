@@ -25,10 +25,10 @@
 }
 
 .link:hover p {
-  color: #797979;
+  color: var(--link);
 }
 .link:hover svg path {
-  fill: #797979;
+  fill: var(--link);
 }
 .link p {
   font-family: Roboto;
@@ -36,7 +36,7 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 29px;
-  color: #474747;
+  color: var(--strong-grey);
   margin-left: 10px;
   margin-top: 3px;
 }
@@ -56,20 +56,20 @@
 .search-button svg {
   width: 20px;
   height: 20px;
-  background: white;
+  background: var(--white);
 }
 
 .search-button path {
-  fill: #bbbbbb;
+  fill: var(--strong-grey);
 }
 .search-button:hover path {
-  fill: #d9d6d6;
+  fill: var(--link);
 }
 .input-search-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: var(--white);
   width: 300px;
   padding: 7px 0px 7px 0px;
   border-radius: 10px;
@@ -78,14 +78,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: rgb(255, 253, 253);
   width: 300px;
   padding: 15px 0px 15px 0px;
   border-radius: 10px;
   margin-top: 10px;
   border: none;
   padding: 18px 25px;
-  color: gray;
+  color: var(--link);
 }
 
 .select-search:focus {

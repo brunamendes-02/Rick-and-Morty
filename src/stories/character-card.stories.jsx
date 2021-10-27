@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CharacterCard } from '../components/CharacterCard';
+import { CharacterCard } from '../components/character-card.component';
 
 export default {
   title: 'Components/CardCharacter',

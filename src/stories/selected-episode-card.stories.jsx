@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SelectedEpisodeCard } from '../components/SelectedEpisodeCard';
+import { SelectedEpisodeCard } from '../components/selected-episode-card.component';
 
 export default {
   title: 'Components/CardEpisode',
@@ -20,9 +20,5 @@ const selectedEpisodes = {
   };
 
 export function SelectedEpisodeCardStory() {
-  return (
-    <>
-      <SelectedEpisodeCard episode={selectedEpisodes}/>
-    </>
-  )
+  return  <SelectedEpisodeCard episode={selectedEpisodes}/>
 }
