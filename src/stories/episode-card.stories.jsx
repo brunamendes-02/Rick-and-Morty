@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EpisodeCard } from '../components/EpisodeCard';
+import { EpisodeCard } from '../components/episode-card';
 
 export default {
   title: 'Components/CardEpisode',

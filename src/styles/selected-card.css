@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-.selected-character-card-container {
+.selected-card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +56,7 @@
   padding: 10px;
   color: #242424;
 }
-.episodes-container {
+.selected-container {
   overflow-y: auto;
 }
 .information-content {

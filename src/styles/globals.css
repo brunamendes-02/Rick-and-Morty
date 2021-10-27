@@ -22,13 +22,9 @@
 }
 
 body {
-  background-attachment: var(--white);
+  background: var(--white);
 }
 
 button {
   cursor: pointer;
-}
-link {
-  text-decoration: none;
-  color: inherit;
 }

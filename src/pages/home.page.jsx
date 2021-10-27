@@ -1,8 +1,11 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import logo from '../assets/images/logo.png';
+import characters from '../assets/images/personagens1.png';
+
 import '../styles/home.css';
-import logo from '../assets/logo.png';
-import characters from '../assets/personagens1.png';
+
 export function HomePage() {
   return (
     <div className="homeContainer">

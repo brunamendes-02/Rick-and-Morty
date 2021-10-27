@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
-import '../styles/selected-character-card.css';
+
+import '../styles/selected-card.css';
+
 export function SelectedCharacterCard({character}) {
   const [status, setStatus] = useState();
 
@@ -19,9 +21,9 @@ export function SelectedCharacterCard({character}) {
     }, [character]);
 
     return (
-      <div className="selected-character-card-container">
+      <div className="selected-card-container">
         <img className="profile-picture" src={character.image} alt="character" />
-        <div class="episodes-container">
+        <div className="selected-container">
           <div className="main-informations">
             <p className="name">{character.name}</p>
             <p className="status">({status})</p>
@@ -29,12 +31,12 @@ export function SelectedCharacterCard({character}) {
           <p className="locale">{character.origin.name}</p>
           <h1 className="episodes-title">Episódios ({character.episode.length})</h1>
             {character.episode.map((ep, index) => {
-              return <div class="episode">
-              <div class="information-content">
+              return <div className="episode">
+              <div className="information-content">
                 <p>Nome: &nbsp;</p>
                 <p>{ep.name}</p>
               </div>
-              <div class="information-content">
+              <div className="information-content">
                 <p>Data de lançamento:  &nbsp;</p>
                 <p>{ep.air_date}</p>
               </div>
