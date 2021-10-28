@@ -109,11 +109,6 @@ type Query {
   locationsByIds(ids: [ID!]!): [Location]
 }
 
-enum CacheControlScope {
-  PRIVATE
-  PUBLIC
-}
-
 input FilterCharacter {
   gender: String
   name: String
