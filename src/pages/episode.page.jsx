@@ -8,9 +8,9 @@ import { orderByQuantity } from '../utils/order-by-quantity';
 import { EpisodeCard } from "../components/episode-card.component";
 import { SelectedEpisodeCard } from "../components/selected-episode-card.component";
 
-import Arrow from '../assets/icon/arrow';
-import Search from '../assets/icon/search';
-import Loader from '../assets/icon/loader';
+import Arrow from '../assets/icons/arrow';
+import Search from '../assets/icons/search';
+import Loader from '../assets/icons/loader';
 
 import '../styles/character-and-episode-page.css';
 export function EpisodePage() {

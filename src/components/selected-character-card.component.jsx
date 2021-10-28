@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import '../styles/selected-card.css';
 
 export function SelectedCharacterCard({character}) {
-  const [status, setStatus] = useState();
+  const [status, setStatus] = useState('');
 
     useEffect(() => {
       if (character) {
@@ -22,7 +22,7 @@ export function SelectedCharacterCard({character}) {
 
     return (
       <div className="selected-card-container">
-        <img className="profile-picture" src={character.image} alt="character" />
+        <img className="profile-picture" src={character.image} alt={`Imagem do personagem ${character.name}`} />
         <div className="selected-container">
           <div className="main-informations">
             <p className="name">{character.name}</p>

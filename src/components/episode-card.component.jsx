@@ -1,5 +1,5 @@
 import React from "react";
-import Arrow from '../assets/icon/arrow';
+import Arrow from '../assets/icons/arrow';
 
 import '../styles/episode-card.css';
 
