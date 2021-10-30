@@ -91,7 +91,7 @@ export function CharacterPage() {
         ): (       
         <div className="page-container">
 
-          <div>
+          <div className="character-page-container-main" style={{width: '40%'}}>
           {characters?.length > 0 && characters?.map((character, index) =>
             <CharacterCard selectedCharacter={(value) => setSelectedCharter(value)} character={character} key={index} />
           )}

@@ -90,7 +90,7 @@ export function EpisodePage() {
         </div>
         ) : (
         <div className="page-container">
-          <div>
+          <div className="episode-page-container-main">
             {episodes?.length > 0 && episodes?.map((episode, index) => {
               return <EpisodeCard selectedEpisode={(value) => setSelectedEpisode(value)} episode={episode} key={index}/>
             })}

@@ -27,7 +27,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 35px;
   color: var(--strong-grey);
   padding: 5px;
@@ -37,7 +37,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 1.1rem;
   padding: 5px;
   line-height: 35px;
   color: #df9504;
@@ -45,7 +45,7 @@
 
 .locale {
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 1rem;
   text-align: center;
   color: var(--strong-grey);
   margin-bottom: 10px;
@@ -54,7 +54,7 @@
   background: #dcdcdc;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 10px;
   color: #242424;
 }
@@ -64,7 +64,7 @@
 .information-content {
   display: flex;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 1rem;
   color: var(--strong-grey);
   margin-left: 10px;
   margin-right: 10px;

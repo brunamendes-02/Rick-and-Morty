@@ -18,7 +18,7 @@
 .episode-card-container p {
   font-family: Roboto;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: var(--strong-grey);
 }
 .arrow {
