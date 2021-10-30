@@ -13,8 +13,7 @@ export function SelectedEpisodeCard({episode}) {
           <h1 className="episodes-title">Personagens ({episode.characters.length})</h1>
             {episode.characters.map((character, index) => {
               return  <div className="information-content" key={index}>
-                <p>-&nbsp;</p>
-                <p>{character.name}</p>
+                <p>- {character.name}</p>
               </div>
             })}
         </div>

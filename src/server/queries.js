@@ -18,20 +18,6 @@ const getCharacterByName = gql`
   }
 }`
 
-const getAllEpisodes = gql`
-  query Episodes($page: Int) {
-    episodes(page: $page) {
-      results {
-        id
-        name
-        air_date
-        characters {
-          name
-        }
-      }
-  }
-}`
-
 const getEpisodeByName = gql`
   query EpisodeByName($page: Int, $name: String) {
     episodes(page: $page, filter: {name: $name}) {
@@ -47,6 +33,5 @@ const getEpisodeByName = gql`
 
 export { 
   getCharacterByName, 
-  getEpisodeByName,
-  getAllEpisodes
+  getEpisodeByName
 }

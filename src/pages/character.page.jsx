@@ -19,7 +19,7 @@ export function CharacterPage() {
   const [characterName, setCharacterName] = useState('');
   const [filterType, setFilterType] = useState('clean');
   const [nameToSearch, setNameToSearch] = useState('');
-  const [characters, setCharacters] = useState('');
+  const [characters, setCharacters] = useState([]);
   const { loading: loadingCharacterByName, data: dataCharacterByName } = useQuery(getCharacterByName, {
     variables: {name: nameToSearch},
   });

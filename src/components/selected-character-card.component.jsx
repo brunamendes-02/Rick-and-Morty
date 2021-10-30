@@ -33,12 +33,10 @@ export function SelectedCharacterCard({character}) {
             {character.episode.map((ep, index) => {
               return <div className="episode" key={index}>
               <div className="information-content">
-                <p>Nome: &nbsp;</p>
-                <p>{ep.name}</p>
+                <p>Nome: {ep.name}</p>
               </div>
               <div className="information-content">
-                <p>Data de lançamento:  &nbsp;</p>
-                <p>{ep.air_date}</p>
+                <p>Data de lançamento: {ep.air_date}</p>
               </div>
               </div>
             })}

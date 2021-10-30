@@ -18,7 +18,7 @@ export function EpisodePage() {
   const [episodeName, setEpisodeName] = useState('');
   const [nameToSearch, setNameToSearch] = useState('');
   const [filterType, setFilterType] = useState('clean');
-  const [episodes, setEpisodes] = useState('');
+  const [episodes, setEpisodes] = useState([]);
 
   const { loading: loadingEpisodeByName, data: dataEpisodeByName } = useQuery(getEpisodeByName, {
     variables: {name: nameToSearch},
