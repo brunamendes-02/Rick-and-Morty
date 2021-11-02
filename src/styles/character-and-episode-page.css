@@ -33,7 +33,7 @@
 .link p {
   font-family: Roboto;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 1rem;
   line-height: 29px;
   color: var(--strong-grey);
