@@ -11,7 +11,7 @@
   box-shadow: 4px 10px 10px rgba(145, 145, 145, 0.25);
 }
 .episode-card-container:hover {
-  background: #f7f7f7;
+  background: var(--white-hove);
 }
 .episode-card-container p {
   font-family: Roboto;

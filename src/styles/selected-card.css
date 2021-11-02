@@ -38,18 +38,19 @@
   font-size: 1.1rem;
   padding: 5px;
   line-height: 35px;
-  color: #df9504;
+  color: var(--orange);
 }
 
 .locale {
   font-family: Roboto;
+  font-weight: 300;
   font-size: 1rem;
   text-align: center;
   color: var(--strong-grey);
   margin-bottom: 10px;
 }
 .episodes-title {
-  background: #dcdcdc;
+  background: var(--grey);
   font-family: Roboto;
   font-weight: bold;
   font-size: 1rem;
@@ -71,5 +72,5 @@
 .episode {
   margin-bottom: auto;
   padding: 10px;
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid var(--grey);
 }

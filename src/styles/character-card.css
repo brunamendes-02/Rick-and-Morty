@@ -11,7 +11,7 @@
 }
 
 .character-card-container:hover {
-  background: #f7f7f7;
+  background: var(--white-hove);
 }
 
 .character-card-container p {

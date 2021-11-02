@@ -5,12 +5,15 @@
 
 :root {
   --white: #fcfafa;
+  --white-hover: #f7f7f7;
   --background: #f4f4f4;
   --blue: #22a2bd;
+  --light-blue: #52c0d7;
   --green: #8afe5c;
   --strong-grey: #474747;
   --link: #797979;
   --grey: #dcdcdc;
+  --orange: #df9504;
 }
 
 html {

@@ -25,7 +25,7 @@ export function EpisodePage() {
   });
 
   useEffect(() => {
-    setEpisodes(dataEpisodeByName?.episodes?.results)
+    setEpisodes(dataEpisodeByName?.episodes?.results);
   },[dataEpisodeByName]);
 
 
