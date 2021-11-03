@@ -2,7 +2,6 @@ import React, {useState, useEffect, useCallback} from "react";
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { getCharacterByName } from '../server/queries';
-import { filterByName } from '../utils/filter-by-name.utils';
 import { orderByQuantity } from '../utils/order-by-quantity';
 
 import { CharacterCard } from '../components/character-card.component';
@@ -30,10 +29,6 @@ export function CharacterPage() {
 
   useEffect(() => {
     switch(filterType) {
-      case "name":
-        const sortedCharacters = filterByName(dataCharacterByName?.characters);
-        setCharacters(sortedCharacters);
-      break;
       case "char-more":
         const orderedMoreCharacters = orderByQuantity('more', dataCharacterByName?.characters, 'episode')
         setCharacters(orderedMoreCharacters);
@@ -79,7 +74,6 @@ export function CharacterPage() {
             label="Ordenar por"
           >
             <option defaultValue value="clean">Ordenar</option>
-            <option value="name">Nome</option>
             <option value="char-more">Mais episódios</option>
             <option value="char-less">Menos episódios</option>
           </select>

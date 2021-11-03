@@ -2,7 +2,6 @@ import React, {useState, useEffect, useCallback} from "react";
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { getEpisodeByName } from '../server/queries';
-import { filterByName } from '../utils/filter-by-name.utils';
 import { orderByQuantity } from '../utils/order-by-quantity';
 
 import { EpisodeCard } from "../components/episode-card.component";
@@ -17,7 +16,7 @@ export function EpisodePage() {
   const [selectedEpisode, setSelectedEpisode] = useState();
   const [episodeName, setEpisodeName] = useState('');
   const [nameToSearch, setNameToSearch] = useState('');
-  const [filterType, setFilterType] = useState('clean');
+  const [orderType, setOrderType] = useState('clean');
   const [episodes, setEpisodes] = useState([]);
 
   const { loading: loadingEpisodeByName, data: dataEpisodeByName } = useQuery(getEpisodeByName, {
@@ -26,15 +25,10 @@ export function EpisodePage() {
 
   useEffect(() => {
     setEpisodes(dataEpisodeByName?.episodes?.results);
-  },[dataEpisodeByName]);
-
+  }, [dataEpisodeByName]);
 
   useEffect(() => {
-    switch(filterType) {
-      case "name":
-        const filteredEpisodes = filterByName(dataEpisodeByName?.episodes)
-        setEpisodes(filteredEpisodes);
-      break;
+    switch(orderType) {
       case "ep-more":
         const orderedMoreEpisodes = orderByQuantity('more', dataEpisodeByName?.episodes, 'character')
         setEpisodes(orderedMoreEpisodes);
@@ -47,11 +41,11 @@ export function EpisodePage() {
         setEpisodes(dataEpisodeByName?.episodes?.results);
         break;
     }
-  }, [dataEpisodeByName?.episodes, filterType]);
+  }, [dataEpisodeByName?.episodes, orderType]);
 
   const handleSearch = useCallback(() => {
       setNameToSearch(episodeName);
-      setFilterType('clean')
+      setOrderType('clean')
   }, [episodeName])
 
   return (
@@ -74,12 +68,11 @@ export function EpisodePage() {
         </div>
           <select
             className="select-search"
-            value={filterType}
-            onChange={(event) => setFilterType(event.target.value)}
+            value={orderType}
+            onChange={(event) => setOrderType(event.target.value)}
             label="Ordenar por"
           >
             <option defaultValue value="clean">Ordenar</option>
-            <option value="name">Nome</option>
             <option value="ep-more">Mais personagens</option>
             <option value="ep-less">Menos personagens</option>
           </select>

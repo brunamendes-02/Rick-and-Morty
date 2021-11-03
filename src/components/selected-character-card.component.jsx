@@ -28,7 +28,7 @@ export function SelectedCharacterCard({character}) {
             <p className="name">{character.name}</p>
             <p className="status">({status})</p>
           </div>
-          <p className="locale">{character.origin.name}</p>
+          <p className="locale">{character.origin.name === 'unknown' ? 'Origem desconhecida' : character.origin.name}</p>
           <h1 className="episodes-title">Episódios ({character.episode.length})</h1>
             {character.episode.map((ep, index) => {
               return <div className="episode" key={index}>

@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client'
 
 const getCharacterByName = gql`
-  query CharacterByName($page: Int, $name: String) {
-    characters(page: $page, filter: {name: $name}) {
+  query CharacterByName($name: String) {
+    characters(filter: {name: $name}) {
       results {
       name
       image
@@ -19,8 +19,8 @@ const getCharacterByName = gql`
 }`
 
 const getEpisodeByName = gql`
-  query EpisodeByName($page: Int, $name: String) {
-    episodes(page: $page, filter: {name: $name}) {
+  query EpisodeByName($name: String) {
+    episodes(filter: {name: $name}) {
       results {
         name
         air_date
