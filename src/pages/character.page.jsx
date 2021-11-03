@@ -16,7 +16,7 @@ import '../styles/character-and-episode-page.css';
 export function CharacterPage() {
   const [selectedCharter, setSelectedCharter] = useState();
   const [characterName, setCharacterName] = useState('');
-  const [filterType, setFilterType] = useState('clean');
+  const [orderType, setOrderType] = useState('clean');
   const [nameToSearch, setNameToSearch] = useState('');
   const [characters, setCharacters] = useState([]);
   const { loading: loadingCharacterByName, data: dataCharacterByName } = useQuery(getCharacterByName, {
@@ -28,7 +28,7 @@ export function CharacterPage() {
   },[dataCharacterByName]);
 
   useEffect(() => {
-    switch(filterType) {
+    switch(orderType) {
       case "char-more":
         const orderedMoreCharacters = orderByQuantity('more', dataCharacterByName?.characters, 'episode')
         setCharacters(orderedMoreCharacters);
@@ -41,11 +41,11 @@ export function CharacterPage() {
         setCharacters(dataCharacterByName?.characters?.results);
         break;
     }
-  },[dataCharacterByName?.characters, filterType]);
+  },[dataCharacterByName?.characters, orderType]);
 
   const handleSearch = useCallback(() => {
       setNameToSearch(characterName);
-      setFilterType('clean')
+      setOrderType('clean')
   }, [characterName])
 
 
@@ -69,8 +69,8 @@ export function CharacterPage() {
         </div>
           <select
             className="select-search"
-            value={filterType}
-            onChange={(event) => setFilterType(event.target.value)}
+            value={orderType}
+            onChange={(event) => setOrderType(event.target.value)}
             label="Ordenar por"
           >
             <option defaultValue value="clean">Ordenar</option>

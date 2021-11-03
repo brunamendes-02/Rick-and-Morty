@@ -1,6 +1,6 @@
 .episode-card-container {
-  padding: 30px 0px 25px 20px;
-  width: 100%;
+  padding: 32px 0px 32px 0px;
+  width: 75%;
   margin-left: 10%;
   background: var(--white);
   border-radius: 5px;
@@ -18,6 +18,7 @@
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--strong-grey);
+  padding-left: 6%;
 }
 .arrow {
   margin-right: 25px;

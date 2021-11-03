@@ -16,10 +16,10 @@ const episodes = [
 ];
 export function EpisodeCardStory() {
   return (
-    <div style={{width: '50%'}}>
+    <>
       {episodes.map((episode, index) => (
         <EpisodeCard key={index} episode={episode} selectedEpisode={(value) => console.log(value)}/>
       ))}
-    </div>
+    </>
   )
 }
